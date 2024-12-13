@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { threadId } from "worker_threads";
 
 export default {
   content: [
@@ -14,5 +15,8 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: ["light", "dark"],
+  },
 } satisfies Config;
